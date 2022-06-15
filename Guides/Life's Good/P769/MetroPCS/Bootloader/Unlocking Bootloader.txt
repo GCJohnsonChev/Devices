@@ -1,0 +1,290 @@
+*** Simplified Guide for: Unlocking Bootloader + Rooting/BusyBox/Custom Recovery + Radio/LG Inverted Logo/Inverted Screen/Wonky Touch Screen
+
+Patch + CyanogenMod 11 Firmware ***
+
+*ONLY FOR*: Metro PCS LG Optimus L9 P769 ( MS769 )
+
+Guide updated: Saturday, October 18th, 2014
+THIS GUIDE IS SPLIT INTO TWO POSTS, THE FIRST HALF OF THE GUIDE IS THIS POST, POST #1, THE SECOND HALF OF THE GUIDE IS POST #2
+
+=== INTRODUCTION
+
+First off let me just say that I did not find these vulnerabilities or write these exploits. The tutorial that I have written here for this device is a very simplified, decomplicated version of several complicated guides for the LG P769 Device all combined into one, easy to read, simple guide. This guide explains the mechanics behind every step so you will know exactly what is going on and why we're able to do this.
+
+I wrote this guide in a deliberately redundant manner so that the reader will be able to easily accomplish unlocking the bootloader for this device. Although this guide may seem to be very long it is in fact written that way so that you can follow every step very easily.
+
+You should understand first that within the LG Optimus L9 series of phones there are multiple submodels, those being the P760, P765, P769 and the MS769. The MS769 is the Metro PCS version that was manufactured by LG to be sold by and used on the Metro PCS Network, however, the MS769 is the EXACT SAME THING as the P769 which was manufactured by LG to be sold by and used on the T-Mobile Network. So it stands to reason that if you have a T-Mobile P769 this guide will also help you unlock your bootloader as long as it was manufactured before T-Mobile requested LG to encrypt the bootloader. Based on all of my research any MS769 or P769 manufactured on or before August, 2013 does NOT have an encrypted bootloader and CAN be unlocked. You may become very frustrated while doing this, but DO NOT GIVE UP because this guide will get the job done.
+
+This guide will get your Bootloader unlocked, SIM Card Slot unlocked and get CyanogenMod 11 KitKat 4.4.4 installed. The greatest thing about having an unlocked bootloader is the fact that you will always have the option to get the LATEST Android OS including the new Lollipop 5.0 when it comes out because new releases will always be portable to this device! Read more about all of this below.
+
+There are also links to now inexpensive but high end and premium protection cases and extended batteries so you can get your device pimped and protected.
+
+=== THE PITCH
+
+Now some Q&A and the reasoning behind this:
+
+Why unlock the bootloader ?
+Why install CyanogenMod ROM/Firmware ?
+Why have prepaid wireless service with a crappy company like Metro PCS / T-Mobile?
+Why this phone?
+
+--- WHY THIS PHONE?
+
+Why this phone ?: This phone is CHEAP. I paid $75 bucks for this phone brand new off eBay with free shipping! then I ordered a hard Poly Carbon triple protection case with an additional layer of Corning Gorilla Glass version 2 + A Privacy Screen Protector for $10 bucks.
+
+The hardware specifications for this phone are ****ing awesome for the price. The hardware is almost all open source. The processor is a Texas Instruments OMAP dual core with no backdoors in it and it can be overclocked to greater than 1.3GHz. Heck, Texas Instruments even published the CAD files and source code for this processor!
+
+You can even order an extended battery for $15 bucks off of Amazon which will give your phone over 7 days of continuous use without charging <--- AWESOME! Link to a ZeroLemon 5450 mAh Extended Battery: [ http://www.amazon.com/ZeroLemon®-T-Mobile-MetroPCS-Extended-Protector/dp/B00MATB7XS/ ]
+There are even other threads and how-to-do guides for waterproofing your triple protection cases and phone by adding gaskets and sealant around the edges!
+
+To sum it up, by getting this device and investing a little time and about $25 bucks or more you end up with a bad ass smart phone that will be ahead of even the newest stock devices out there, on multiple levels, for years to come. You will also have ultimate freedom and control of it as well as the ability to put it on any Network Carrier.. so not only will it be internationally unlocked, you will have in your hands an epic device for under $100 bucks.
+
+--- BASIC PHONE SPECIFICATIONS FOR MS769
+
+Processor: 1 GHz Clock Dual Core TI OMAP 4430 [ http://www.ti.com/product/omap4430 ] <--- This bad boy can be overclocked to 1.3 GHz stable in CyanogenMod! It can also be overvolted and overwatted!
+
+Memory: 1GB of LPDDR3 Memory at 400 MHz
+Internal Memory Storage: Anywhere from 1.8GB to 4GB depending on the model
+Expandable Memory Storage: Up to 32GB with an External Micro SDHC Card
+Screen: 4.7" QHD with Corning Gorilla Glass version 2
+Radio: GSM 850/900/1800/1900, UMTS I/II/IV/V* <--- This means you can use this device on AT&T, T-Mobile, Sprint, Verizon and U.S. Cellular which includes all of the subsidy providers such as: SimpleMobile(AT&T/T-Mobile), MetroPCS(T-Mobile), Boost(Sprint), Verizon, etc..
+^^^ ONLY AFTER THE BOOTLOADER IS UNLOCKED AND YOU HAVE INSTALLED CYANOGENMOD AND SOME PROVIDERS OFFER FREQUENCIES OF LOWER TIERS SUCH AS THE UNLIMITED 3G NO CONTRACT AT&T ^^^
+^^^ ALL YOU WOULD DO IS THEN UNLOCK THE DEVICE SIM SLOT BY GETTING YOUR DEVICE SIM CARD LOCK CODE AND THEN INSERT ANY CARRIER SIM CARD INTO THE SIM CARD SLOT AND YOU WOULD HAVE SERVICE THROUGH THAT PROVIDER ( SEE THE GUIDE FOR GETTING SIM CARD LOCK CODE ) ^^^
+
+--- WHY HAVE PREPAID WIRELESS SERVICE WITH A CRAPPY COMPANY LIKE METRO PCS/T-MOBILE?
+
+Why have prepaid wireless service with a crappy company like Metro PCS/T-Mobile?: With this device you only need to pay for 1 month of service or maybe they have a daily package? Then you can unlock the bootloader, install other Operating Systems/Firmware and put this phone on any GSM/LTE/EDGE/2g/3g/4g network that operates on the radio frequencies that this cell phone supports.
+
+In other words you're paying like $100 bucks for a sweet middle tier phone that you can then put on almost any network... This includes AT&T, T-Mobile, Boost Mobile, SimpleMobile, Metro PCS and lot more unlisted providers in any country in the world. What's even better is that you don't even need to provide these service providers with any personal information because you're paying in full to be on their network.. That means you never have to be subjected to any of their terms of service or any of their policies when you give them a made up name and pay cash for their service.. and trust me you wouldn't like their policies. I say **** contract services.
+
+--- WHY INSTALL CYANOGENMOD ROM/FIRMWARE?
+
+Why install CyanogenMod ROM/Firmware?: You don't have to, but CyanogenMod ROMs/Firmware is the best publicly available Android Firmware in the entire planet. The security of CyanogenMod is top ****ing notch. After you get this installed you can harden your device to be so ****ing secure it rivals a Boeing Black Phone ( A Neo900 will be better though once it comes out ). With the right hardening, the only thing anyone would be able to do remotely is **** with your radio by sending encrypted packets to your radio.. and it would only work
+if there's a mechanism in the hardware code to accept such requests, but again, with the right hardening they will be automatically rejected. And it's not just the remote security provided by CyanogenMod Firmware either, you get absolute freedom and full control over almost every aspect of your phone's hardware, software. You can rip games, music, pictures, videos, movies absolutely anything for free. You can then exploit the service providers in most cases and get truly unlimted 4g LTE network speed without throttling. This means you can use your device as an all in one system on the go! You can use it for unlimited high speed internet with low ping and you can wirelessly tether to your laptop/computer effortlessly. With the right software and additional configurations you will get an excellent ping of <=64 ms. All I have to say is..
+
+FREE AND OPEN SOURCE SOFTWARE FOR LIFE!!!!!
+
+BE SURE TO LOOK FOR MY CYANOGENMOD SECURITY HARDENING TUTORIAL!
+
+--- WHY UNLOCK THE BOOTLOADER?
+
+Why unlock the bootloader ?: Because you need to unlock the bootloader on this device in order to do all of the above. This device is especially difficult to unlock but as long as you have a device version that is unlockable and all of the requirements this guide will get the job done.
+
+=== CREDITS AND THANKS
+
+You can thank me for writing this. I'm sure most of you couldn't be bothered with the complicated mess of the other guides.
+
+I would also like to thank Lelus, CMahendra and several others for your exploits. Without your work none of this would be possible for this Android device. Above all else I would love to thank the CyanogenMod Team for CyanogenMod! THE BEST ****ING FIRMWARE IN EXISTENCE!
+
+=== USEFUL INFORMATION FOR THE MS769
+
+--- HOW TO BOOT INTO S/W UPGRADE MODE
+
+Remove battery, plug in USB Cable, Hold UP on the volume rocker + Power button for exactly 1 second then insert the battery.
+
+--- HOW TO DO A HARD RESET ON STOCK ROM
+
+With battery inserted, Hold DOWN on the volume rocker + HOME button and then power up the device with the POWER button.
+
+--- HOW TO ACCESS THE LG HIDDEN MENU ON STOCK ROM
+
+On the Dial Pad, press: 3845#*769# OR 3845*#769# to access the LG Hidden Menu.
+
+=== PREREQUISITES
+
+The methods here are very important and you must follow each step accordingly.
+
+Firstly, if your LG MS769 from Metro PCS was manufactured after July, 2013 ( AND POSSIBLY UP TO August, 2013 ) you will *NOT* be able to
+
+unlock the bootloader ( as far as I know, and as of the date of me writing this ),
+because Metro PCS/T-Mobile and other providers requested LG to encrypt the bootloader for this device after they found out folks were hacking the bootloader and loading other Firmware and Operating Systems. So you will have to have a version which was manufactured before
+
+July, 2013. You can find out what device you have by looking at the sticker on the housing of your device underneath the battery. Just
+
+remove the back cover, then remove the battery and you will see the sticker with your device information.
+
+If you have one of the unlockable versions continue reading.
+
+Secondly, you absolutely have to be running either Microsoft Windows XP Service Pack 2 or 3, Microsoft Windows Vista or Microsoft Windows 7, have a password on the built in Administrator account that you KNOW and have DOTNET 3.5 installed and updated VCRedist Packages which are:
+* VCREDIST 2005 x86
+* VCREDIST 2005 x64 <-- Only if your OS is 64 bit
+* VCREDIST 2008 x86
+* VCREDIST 2008 x64 <-- Only if your OS is 64 bit
+* VCREDIST 2010 x86
+* VCREDIST 2010 x64 <-- Only if your OS is 64 bit
+* VCREDIST 2012 x86
+* VCREDIST 2012 x64 <-- Only if your OS is 64 bit
+* VCREDIST 2013 x86
+* VCREDIST 2013 x64 <-- Only if your OS is 64 bit
+
+You will need both x86 and x64 versions if your Operating System is 64 bit. If your Operating System is 32 bit with a x86 Processor you will not need the x64 versions of the VCREDIST packages.
+
+^^^ ALL OF THESE FILES ARE INCLUDED IN THE ZIP PACKAGE BELOW ^^^
+
+You *cannot* use Microsoft Windows 8 to complete this tutorial because it just won't work ( I couldn't get it to anyway ), there are too many compatibility issues with the software in this guide to get it done. Sorry Linux users! Linux doesn't work either so don't even try it with WINE. This also will not work in a virtual machine. If you have an extra laptop/PC laying around I'd suggest you go and download Microsoft Windows Vista or Microsoft Windows 7. You can get these for free now off TechNet if you still have a TechNet account, or maybe an installation disc if you have one, or you could just download it for free from TPB. I can't post links to TPB here in this forum, but just go check around, actually it's not illegal to download if you don't crack the OS, you're just evaluating it so that you can complete this guide and then reinstall your regular OS.
+
+Also be sure to enable the: *View Files with known File Extensions* option within the *Folder* options in your Microsoft Windows Control Panel Options, and also enable the *View Hidden Files and Folders* Option.
+
+=== MORE PREREQUISITES
+
+* Activated Metro PCS LG Optimus L9 MS769 with Battery <-- Must be activated with an active mobile data connection to unlock bootloader later.
+* Metro PCS Sim Card
+* External SD Card <-- YOU ABSOLUTELY NEED ONE OF THESE AT LEAST 2GB IN SIZE
+* USB Adapter Cable for MS769
+
+Within this guide you will see a link to a .zip file which is hosted on Mega ( formerly MegaUpload ). This .zip file is around 2GB in size.
+
+The .zip file is a package and this package has everything that you will need to complete this guide.
+
+Start now by downloading this package at this link: [ https://mega.co.nz/#!9xBgQQgS!kR14urR1Gd3w_cu8mHbwIQ8urFfiA5bIpgaGgZ-2PPg ]
+
+Now unzip the .zip package that you just downloaded.
+
+This package is very organized.
+
+Within this package that you just unzipped there will be directories named:
+
+* LG L9 - P769\Device SDCard Packages
+* LG L9 - P769\Lelus' Tools
+* LG L9 - P769\LG Device Firmware Packs
+* LG L9 - P769\LG Device USB Drivers
+* LG L9 - P769\LG Firmware Utilities
+* LG L9 - P769\SHTTPS
+* LG L9 - P769\Microsoft Windows Additions
+* Guide.txt
+
+Before this first step you need to find out what version of Android that your device is running, on your device, go to Settings->About Phone->Software Information and take note of what version of Android is installed on your device, whether it be JellyBean or Ice Cream
+
+Sandwich. Now go ahead and do a full System Reset from Settings->Backup and Restore->System Reset. Your device needs to be reset to factory settings and all apps removed before we begin.
+
+Let's get started!
+
+=== SETTING UP
+
+*** STEP 1: Open the folder/directory named: *Device SDCard Packages*, plug your MS769 Device into your computer, select *Storage Mode* on your MS769, now copy all of the folders within this directory to a new folder in the root of your device external SD Card storage and name the folder: *TOOLS*.
+
+So it should look like this on your SD Card:
+
+* External SD Card\TOOLS\APKs
+* External SD Card\TOOLS\CyanogenMod
+* External SD Card\TOOLS\Firmware Patches
+* External SD Card\TOOLS\gApps
+* External SD Card\TOOLS\RAW Files
+* External SD Card\TOOLS\Recovery Images
+
+Assuming that you have a fresh installation of Microsoft Windows XP/Vista/7
+
+*** STEP 2: Open the folder/directory named: *LG Device USB Drivers* and install the executable named: *LGUnitedMobileDriver_S4981MAN38AP22_ML_WHQL_Ver_3.8.1* and also the executable named: *LGPCSuite_Setup.exe*
+
+*** STEP 3: Open the folder/directory named: *Lelus' Tools*, copy whichever folder is your Android version. If you have JellyBean installed on your Android device, copy the folder named: *JellyBean*; if you have Ice Cream Sandwich installed on your device, copy the folder named: *Ice Cream Sandwich*.
+
+Now Open the C:\ partition on your Microsoft Windows Installation and paste the folder that you copied here and then rename the folder to: *Lelus*
+
+*** STEP 4: Disconnect your device from the USB Cable and go to Settings and enable Developer USB Mode and enable Allow Installing Applications from Unknown Sources, now for the USB Mode select: *LG Software Utility* and reconnect your device back into your computer.
+
+Now open a Command Prompt as an administrator and type the command: *cd C:\Lelus* <--- without the asterisk characters. Then type the command: *rootL9.bat* <--- without the asterisk characters. The command prompt window will show that it is starting adb on a network port and then it will exploit your Android and root it, after that the command prompt window will show that it is sending the SuperUser and BusyBox packages to your device, then your device will reboot.
+
+After your device reboots, navigate to the File Manager application on your device and then navigate to: *External SD Card\TOOLS\APKs\* and then select the APK package that is named: *L9RecoveryInstaller_1.5.0.apk* and install it. Open the L9 Recovery Installer Application that you just installed and press the option to install recovery, then press the option for CWM/TWRP, and then press the option to reboot into recovery.
+
+After you have rebooted into Clock Work Mod Recovery make a backup of your stock ROM, then reboot back into your ROM and transfer that backup to your computer.
+
+***** DO NOT TRY TO INSTALL ANY ROMS AT THIS POINT! YOUR BOOTLOADER IS STILL LOCKED AND YOU WILL BRICK YOUR DEVICE IF YOU TRY*****
+
+*** STEP 4.5: Open the Start Menu on Microsoft Windows, in the search bar on the bottom type: *Notepad* <--- without the asterisk characters, right click Notepad and select: *Run as administrator*, select the administrator account and type in your password if required, now open the HOSTS file located at: *C:\Windows\System32\drivers\etc\HOSTS* <-- the HOSTS file does not have a file extension, so it won't show up in this window until you select the: *Show All Files* option here.
+With the HOSTS file opened in Notepad go ahead and add these lines right below the comment character ( comment characters are a # symbol ):
+
+127.0.0.1 csmg.lgmobile.com
+127.0.0.1 csmgdl.lgmobile.com
+
+Save it and proceed to the next step.
+
+*** STEP 5: Copy the folder/directory named: *SHTTPS* that is within the .zip package you downloaded for this guide, open the C:\ partition of your Microsoft Windows Installation and paste the folder you copied. Now open the folder and execute the: *HTTP.exe* file. <--- DO NOT RUN THIS FILE AS AN ADMINISTRATOR, JUST RUN IT NORMALLY. If you are prompted to allow this executable inbound/outbound on the Windows Software Firewall click yes/allow.
+
+=== GETTIN' 'ER DONE
+
+*** STEP 6: Copy the folder/directory named: *LG Firmware Utilities* that is within the .zip package you downloaded for this guide, open the C:\ partition of your Microsoft Windows Installation and paste the folder you copied. Now rename the folder to: *LGTool*, open the folder and execute the executable that is named: *msxml.exe* and wait for this to completely install. Now within this same directory there are 2 other executables which are named: *B2CAppSetup.exe* and *UpTestEX_mod2_marwin.exe*. You will need to right click the first one, select properties then select run compatibility for: *Windows XP Service Pack 2* then click the check box for *Run as Administrator* and click apply, now do the same thing to the second executable which is named: *UpTestEX_mod2_marwin.exe*.
+Make sure that your computer is connected to the Internet at this point or this next part will not work. Now execute the executable named: *B2CAppSetup.exe* let it finish loading and when it says no network just close it. Now execute the executable named: *UpTestEX_mod2_marwin.exe* With this window loaded, for the option: *Select Type* you need to select: *3GQCT*, and for the option: *Select KDZ File*, open the file within the package you unzipped ( from the .zip you downloaded from this guide ), The .KDZ file that you need to open is within this folder/directory:
+
+*** LG L9 - P769\LG Device Firmware Packs\Europe\Unlock Bootloader\V20B_00.kdz *** <-- select this .KDZ file for the flash and select the DIAG mode option in the LG KDZ Flash Tool.
+
+Now Click: *Normal Web Upgrade Test* then on the next pop up window click: *Upgrade Start*
+
+*** STEP 6 NOTES: OK THE WAY THIS WORKS IS YOU'RE USING THE SHTTP WEB SERVER AND A MODIFIED WINDOWS HOST FILE TO TRICK THE LG KDZ FLASH TOOL INTO THINKING THAT IT IS CONNECTING TO THE OFFICIAL LG SERVERS TO CHECK FOR AN UPDATE. BY DOING THIS WE ARE ABLE TO FLASH ANY LG KDZ FIRMWARE PACK OFFLINE. YOU MAY OR MAY NOT GET AN APPLICATION CRASH ON THE LG R&D TEST TOOL, IF THE APPLICATION CRASHES JUST CLOSE IT THEN DISCONNECT YOUR DEVICE FROM THE USB CABLE AND RECONNECT, BUT DO NOT REBOOT THE DEVICE OR PULL THE BATTERY. YOUR DEVICE SHOULD DISPLAY A SCREEN THAT SAYS: *S/W UPGRADE MODE* AFTER YOU HAVE RECONNECTED YOUR DEVICE TO THE USB CABLE ALLOW WINDOWS TO FIND ALL OF THE DRIVERS FOR YOUR DEVICE AUTOMATICALLY AND THEN RE-LAUNCH/RE-EXECUTE THE LG KDZ FLASH TOOL ( *UpTestEX_mod2_marwin.exe* ) AND START THE LAST PART OF STEP #6 OVER AGAIN. FOR STEP #7 YOU WILL NEED TO BE QUICK SO YOU CAN DO THE SWITCHAROO ON THE BIN FILE.
+
+*** STEP 7: Open the folder/directory: *LG L9 - P769\LG Device Firmware Packs\Europe\Unlock Bootloader\Replacement BIN\* <--- in this directory there is a .BIN file which is named: *LGP760_AP[11].BIN* When the LG KDZ Flash Tool reports that it is at 32% you will need to quickly open the *Computer* interface on the Microsoft Windows start menu then quickly paste this string: ( C:\ProgramData\LGMOBILEAX\Phone ) <-- without the brace characters, into the location link bar at the top. Then when that directory shows that there is a file being unpacked with that same file name that you copied you will then have to quicky press *CTRL+V* on your keyboard to overwrite that file with the file that you copied, you will most likely be prompted to overwrite the file as an administrator and you have around 20 seconds to complete the prompts before that BIN file is loaded into your device firmware.
+
+*** STEP 7 NOTES: Once the LG KDZ Flash Tool has completed uploading the European ROM/Firmware your device will restart and be recognized by your computer as a P760 version. Now comes the very frustrating part, I'm really sorry about this but everything is now both inverted and mirrored, so all of your screen presses will be mirrored. As far as I know the only way to unlock
+the bootloader is with this ROM exploit. To make things easier you can navigate to Developer Settings and enable the Visible Screen Presses option so you can see where you are pressing on the screen. Flashing this European P760 KDZ Firmware Pack causes the P769 to become inverted. We flash the Europe Open ROM that is designed for the P760 onto the MS769/P769 with a locked bootloader because doing this will allow for unlocking the bootloader. Essentially what happened is LG allowed for the P760 bootloader to be unlocked in Europe on European Cell Phone Service Providers Networks, LG released an update for the P760s over the air that allowed for it to be unlocked, now since we have this KDZ pack that allows for that unlocking of the bootloader we can flash it onto the P769 and wallah! It's unlockable after that!
+
+*** STEP 7.5: On your device, you now need to navigate to the USB mode options, just disconnect your device from the USB Cable then reconnect and it will show the connection type options make sure it is on *LG Software Mode*. Then disconnect your device from the USB Cable again and navigate to System->Developer Options and enable USB debugging and also enable installing applications
+from unknown sources and finally reconnect your device to the USB Cable.
+
+*** STEP 8: Now you will need to reroot your device again, open a Command Prompt as an administrator and type this command: *cd C:\Lelus\* <--- without the asterisk characters. Then type the command: *rootL9.bat* <--- without the asterisk characters.
+The Command Prompt window will show that it is sending the SuperUser and BusyBox APK packages to the device, then your device will reboot ( if it doesn't reboot by itself you will need to reboot it ) and you will be rooted again with SuperUser and BusyBox installed.
+
+Now you have to manage to open the File Manager on your device and install the APK package that is named: *L9RecoveryInstaller_1.5.0.APK* <-- this .APK package was copied to your device in STEP #1. The location of the APK package is: *External SD Card\TOOLS\APKs\* <-- however if you want to make it much easier with the wonky touch screen you can drop that APK package to the root of your SD Card so you don't have to click more folders.
+
+*** STEP 9: With the L9 Recovery Installer installed on your device, open the L9 Recovery Installer application now and press: *Install Recovery*, then press: *Recovery for TWRP/CWM*.
+
+*** STEP 9 NOTES: It is going to be so incredibly frustrating to press icons and navigate this backwards, inverted, mirror European firmware, but don't give up because you're almost done! Just remember that it's not only mirrored, but it's also inverted too! If you held your device up in front of a mirror you would be able to read it! But hey, just play around with it for a while you will figure it out.
+
+It's a ***** let me tell you! just try to press areas under the confirmation window buttons and you will see how to get it done. Once you have the L9 Recovery installed go ahead and click the *Reboot into Recovery* option within the L9 Recovery Installer application window on your device.
+
+*** STEP 10: Once your device reboots, you will be back in Clock Work Mod Recovery. Now you need to select the option: *Install .ZIP From SD Card*. Navigate to: *External SD Card\TOOLS\Firmware Patches\* and select the .zip file named: *radio.zip* and install it.
+
+Then reboot the phone with the reboot option in Clock Work Mod Recovery. Once your device has rebooted back into the European ROM/Firmware unlock the screen and let it sit for 35 minutes. Make sure you have at least 1 bar on the reception icon or this won't work. Let it sit for 35 minutes then come back.
+
+*** STEP 10 NOTES: The reason you are waiting at least 35 minutes: since you flashed the Europe Open ROM which allows for unlocking the bootloader on the P769, you now need to allow the phone to communicate with the LG servers which will send the command to your phone that allows you to reboot into the bootloader. It takes some time for this to happen, I have seen people say it
+takes 35 minutes to 1 hour or more. In my own experience I only needed to wait 35 minutes, just make sure you have a good signal with at least the 3g icon or 4g/H/H+ symbol on your bars for it to work. I have also read elsewhere in my research that some people got it to work with their wifi on on top of being connected to the mobile network. If at first this next part does not work, keep trying because it will eventually work. If it doesn't work with the wifi off try it again with the wifi on, etc..
+
+=== UNLOCKING THE BOOTLOADER
+
+*** STEP 11: Get back on your computer and open a Command Prompt as an administrator and type the command: *cd C:\Lelus\stuff* <--- without the asterisk characters. Then type the command: *adb devices* <--- without the asterisk characters, if all is well you should have an alphanumeric string printed in your command prompt window which indicates that your device is connected
+and recognized on your computer by ADB, now type the command: *adb reboot oem-unlock* <--- without the asterisk characters. If everything was done correctly your phone will reboot and you will be greeted with the fastboot OEM Unlock screen, press up on the volume rocker to permanently unlock the bootloader!!!
+
+Now type the command: *fastboot flash recovery CWM_Touch.img* <--- without the asterisk characters. The command prompt window will show that it sent the Clock Work Mod Touch Image to the recovery partition on your device.
+
+Now you will need to reboot the device into recovery by typing the command: *fastboot reboot recovery* <--- without the asterisk characters.
+
+If it doesn't reboot into recovery for you then you will need to reboot into recovery by going back to the L9 Recovery Installer Application and press the option to reboot into recovery, or when rebooting your phone now that you have recovery installed the LED lights on the bottom of your phone ( Back button, Menu button ) will light up upon booting into a stock ROM, just press down on the volume rocker to boot into Clock Work Mod Recovery.
+
+=== UNDOING THE DAMAGE FROM THE EUROPE OPEN ROM/FIRMWARE
+
+*** STEP 12: With Clock Work Mod Recovery Touch menu booted ( Avoid using the touch screen and instead use volume up and down to move up/down and power button to select ), select: *Install .ZIP from SD Card*, then navigate back to: *External SD Card\TOOLS\Firmware Pacthes\* and install the files that are named: *20f u-boot.zip*, *cwm_ts_fix_p769.zip*, *v6.bin.zip*, and *radio.zip* one after the other.
+
+Okay now that you have undone the noticeable damage from the Europe Open ROM/Firmware you can restore the original stock rom that you originally had installed on your device. Go ahead and select the Mounts and Storage option then Format the /system/, /cache/ and /data/ partitions, now go back and select the Backup/Restore option and restore the backup image of your stock ROM. Now reboot your device from Clock Work Mod Recovery.
+
+Now take a breather for a couple of minutes.
+
+OK, now that you're rested up and you understand everything you just did you can overwrite your firmware with a fully stock KDZ. Doing that at this point will completely overwrite all firmware code and remove any other damage from the Europe Open ROM. So go ahead and plug your device back into your computer and select: *LG Software Suite* for the USB connection mode. Then fire up the LG KDZ Flash Tool again. Now download the T-Mobile V20H KDZ Firmware Pack for P769 devices here: [
+
+http://csmgdl.lgmobile.com/dn/downloader.dev?fileKey=FW959486573210987654321/V20H_00.kdz ]. Now flash that KDZ. Good thing about this latest KDZ Pack is it will also upgrade your baseband to the newest T-Mobile baseband for the P769. If you were using this guide for a P769 device that was released outside of the United States and you are using it now outside of the United States you can download the appropriate KDZ
+from a list in this thread post #1: http://forum.xda-developers.com/showthread.php?t=2107971
+
+=== INSTALLING CYANOGENMOD OR LINEAGEOS ROM / FIRMWARE 11 KitKat 4.4.4
+
+*** STEP 13: After you have upgraded your stock firmware in Step #12 you will now need to install Clock Work Mod Recovery again, but this time you're going to install the latest version of it for the P769, being version 6.0.4.9 and you need this version in order to install any CM11 Firmware Image. I suggest you install KANG CyanogenMod 11 KitKat 4.4.4 because this one is the absolute best out of all of them, it is the most updated, stable and it has SELinux enabled and enforcing.
+
+Go ahead and open the directory you unzipped from the .zip package you downloaded in this guide and navigate to the folder named: *CMahendra Tools*, copy this folder to the root of your Device SD Card, then install the eu.chainfire.supersu-1.apk, then install the LGPWN.apk and finally the com.cgollner.flashify-1.apk. Open the LGPWN application and select *Root Me* then go through the prompts and then select restore
+backup. Once it restores your Device will reboot and you will have root again, now open the Flashify Recovery Image Flasher application, allow it root access when it prompts for it, then select flash recovery, select file, then navigate to Tools on your SD Card then Recovery Images and select the file named: *recovery-6.0.4.9-p769.img*. Now download the newest KANG CyanogenMod 11 KitKat 4.4.4 at this link: [
+
+https://www.androidfilehost.com/?w=files&flid=18559 ] <--- AND MAKE SURE YOU GET THE ONE THAT IS FOR P769 AS INDICATED IN THE FILE NAME HERE. Also download the latest gApps for this ROM here: http://forum.xda-developers.com/showthread.php?t=2397942. Copy both the CM11 zip and the gApps zip to your SD Card, boot into Clock Work Mod Recovery and, Format /boot/, /system/, /cache/, /data/, and /persist/, then install the CM11 zip and the gApps zips. Reboot and you're done! Enjoy it!
+
+=== GETTING THE SIM UNLOCK CODE
+
+In order to put this device on other carriers such as AT&T, SimpleMobile and what have you, you will need to get the SIM Unlock Code either from various methods posted on this forum or by calling Metro PCS and asking them for the code. If you tell them you intend to go out of the country for business they will give you the code over the phone, if they try to say: "durr you can't have it unless you have 3 months of service with us" just tell them you are a US Citizen and Obama passed a law that says they have to give you the code. Worked for me anyway! LOL. If not there are other guides here that will get it done for you for free.
+
+=== END OF TUTORIAL/GUIDE
+
+Congratulations! You have completed the guide!
+
+Always keep your CyanogenMod / LineageOS Firmware and gApps up to date so you always have the latest and the greatest!
+---------------------------------------------------
+
+That's it! You're all done!
+
+If you liked my simplified guide let me know by saying thanks!
+
+Thank you for reading!
+
+And enjoy your unlocked Bootloader and CyanogenMod 11 KitKat Firmware!
