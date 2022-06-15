@@ -1,0 +1,46 @@
+== Downloads
+
+EMMC_15_SS_Install_QL1_6_0_1_MM_Bootloader_Unlock_AIO_Rom.zip -- Rom Zip
+EMMC_11_S5_Root_Tools_2022_V3.7z
+
+== Directions
+
+1. Download both files and unzip EMMC_15_And_11_S5_Root_Tools_2022_V3.7z
+
+2. Reboot phone too Download Mode by holding Power+VolDwn+HomeButton as phone starts up
+
+3. Plug phone into computer and open the Odin provided in the above file in the Odin_Folder
+
+4. In Odin Choose BL slot and choose the COMBINATION_VZW_FA44_G900VVRU2APA1_VZW2APA1_2572656_REV00_user_mid_noship_MULTI_CERT.tar.md5 Located in the Odin_Folder
+
+5. Flash the file using provided Odin let phone reboot. This will wipe your phone
+
+6. Once phone is rebooted make sure its plugged into computer and phone use recognized by computer
+
+7. Run the Install_One_Click.cmd this should install safestrap. If this method fails countinue with below methods.
+
+8. If above method fails you can reboot and try again or run the Manual_Install_Root_Apps.cmd and try below methods to root
+
+== 
+
+1. You will need to be connected to a network. Click on King root app then click try root
+
+2. Once root is successful don't click on the optimize and close the king root app.
+
+3, Run the Manual_Install_SuperSu.cmd
+
+== Installing Safe Strap
+
+9. This only needs to be done if 1Click bat method failed. Now click on safestrap app and clisk install safestrap click allow in root dialog app once installed click reboot to safestrap
+
+10. Busybox must be installed ifirst if you used towelroot method too root
+
+== Instructions To Unlock Bootloader
+
+11. Enter safestrap now in safetrap it will ask you to swipe to allow modding system make sure to do this now . If you have not copied the EMMC_15_SS_Install_QL1_6_0_1_MM_Bootloader_Unlock_AIO_Rom.zip from the EMMC_15_Bootloader_Unlock_Zip folder do so now Click install tab and choose EMMC_15_SS_Install_QL1_6_0_1_MM_Bootloader_Unlock_AIO_Rom.zip and install.
+
+12. When done phone will power off.
+
+13. Reboot phone to recovery you should now have TWRP recovery installed and the choose wipe the advanced wipe and wipe data only then reboot
+
+14. Phone will reboot and stick on red Verizon screen for probably 15 to 20 min be patient. When finally booted you will have an unlocked bootloader with TWRP recovery running a Deodexed Rooted QL1 stock MM 6.0 Rom Rooted with Magisk.
